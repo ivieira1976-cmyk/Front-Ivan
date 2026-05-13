@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Exemplo Display Inline-Block</title>
+
+<style>
+body {
+    font-family: Arial;
+    padding: 20px;
+}
+
+/* INLINE-BLOCK */
+.inline-block {
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    background: lightblue;
+    border: 2px solid blue;
+    margin: 10px;
+    text-align: center;
+    line-height: 100px;
+}
+
+/* MENU */
+.menu a {
+    display: inline-block;
+    background: #333;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    background: #555;
+}
+
+/* BOTÃO */
+.botao {
+    display: inline-block;
+    background: green;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Exemplo de display: inline-block</h1>
+
+<p>
+O <strong>display: inline-block</strong> combina características de <code>inline</code> e <code>block</code>.
+</p>
+
+<hr>
+
+<h2>Exemplo 1 – Elementos lado a lado com tamanho definido</h2>
+
+<div class="inline-block">Box 1</div>
+<div class="inline-block">Box 2</div>
+<div class="inline-block">Box 3</div>
+
+<p>
+👉 Ficam na mesma linha, mas aceitam largura e altura.
+</p>
+
+<hr>
+
+<h2>Exemplo 2 – Menu horizontal melhorado</h2>
+
+<div class="menu">
+    <a href="#">Home</a>
+    <a href="#">Produtos</a>
+    <a href="#">Contato</a>
+</div>
+
+<p>
+👉 Melhor que inline porque aceita padding e altura corretamente.
+</p>
+
+<hr>
+
+<h2>Exemplo 3 – Botões</h2>
+
+<span class="botao">Comprar</span>
+<span class="botao">Detalhes</span>
+
+<p>
+👉 Ideal para botões alinhados.
+</p>
+
+<hr>
+
+<h2>Resumo</h2>
+
+<ul>
+    <li>✔ Fica na mesma linha (como inline)</li>
+    <li>✔ Aceita width e height (como block)</li>
+    <li>✔ Muito usado em menus e botões</li>
+    <li>⚠ Pode ter espaço entre elementos (gap natural)</li>
+</ul>
+
+</body>
+</html>

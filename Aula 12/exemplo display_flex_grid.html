@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body { margin:0; font-family:Arial; }
+
+/* GRID PRINCIPAL */
+.layout {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: white;
+    padding: 15px;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    gap: 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    background: lightblue;
+    padding: 40px;
+    text-align: center;
+}
+
+/* GRID DE CARDS */
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+/* FOOTER */
+.footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+    .menu {
+        flex-direction: column;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="layout">
+
+<div class="header">
+    <div>Logo</div>
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">Produtos</a>
+        <a href="#">Contato</a>
+    </div>
+</div>
+
+<div class="hero">
+    <h1>Loja Online</h1>
+</div>
+
+<div class="produtos">
+
+<div class="card">Produto 1</div>
+<div class="card">Produto 2</div>
+<div class="card">Produto 3</div>
+
+</div>
+
+<div class="footer">
+    Rodapé
+</div>
+
+</div>
+
+</body>
+</html>

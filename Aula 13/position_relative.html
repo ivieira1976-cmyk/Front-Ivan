@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo Position Relative</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        .box {
+            background-color: lightblue;
+            border: 2px solid blue;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        /* RELATIVE */
+        .relative {
+            position: relative;
+            top: 20px;
+            left: 30px;
+
+            background-color: orange;
+        }
+
+        .destaque {
+            background-color: lightgreen;
+        }
+
+        /* Container para exemplo */
+        .container {
+            position: relative;
+            background-color: #ddd;
+            height: 150px;
+            border: 2px dashed black;
+            margin-top: 20px;
+        }
+
+        .filho {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: red;
+            color: white;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Exemplo de position: relative</h1>
+
+<p>
+O <strong>position: relative</strong> mantém o elemento no fluxo normal,
+mas permite deslocá-lo usando <code>top</code>, <code>left</code>, etc.
+</p>
+
+<hr>
+
+<h2>Exemplo 1 – Deslocamento</h2>
+
+<div class="box">Elemento 1</div>
+<div class="box relative">Elemento 2 (relative deslocado)</div>
+<div class="box">Elemento 3</div>
+
+<p>
+👉 O elemento foi movido, mas seu espaço original continua reservado.
+</p>
+
+<hr>
+
+<h2>Exemplo 2 – Comparação com elemento normal</h2>
+
+<div class="box destaque">Elemento normal</div>
+
+<div class="box relative">
+    Fui movido com top e left
+</div>
+
+<div class="box destaque">Outro elemento</div>
+
+<p>
+👉 Note que os outros elementos não ocupam o espaço deixado.
+</p>
+
+<hr>
+
+<h2>Exemplo 3 – Referência para absolute</h2>
+
+<div class="container">
+    Container com position: relative
+
+    <div class="filho">
+        Sou absolute dentro do container
+    </div>
+</div>
+
+<p>
+👉 O <strong>relative</strong> serve como base para elementos com <code>absolute</code>.
+</p>
+
+<hr>
+
+<h2>Resumo</h2>
+
+<ul>
+    <li>✔ Mantém o elemento no fluxo normal</li>
+    <li>✔ Permite usar top, left, right, bottom</li>
+    <li>✔ Mantém o espaço original</li>
+    <li>✔ Serve de referência para elementos absolute</li>
+</ul>
+
+</body>
+</html>

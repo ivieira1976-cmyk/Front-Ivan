@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplos de Opacity</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: blue;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        /* 1 - Opacidade total */
+        .op1 {
+            opacity: 1;
+        }
+
+        /* 2 - Meio transparente */
+        .op2 {
+            opacity: 0.5;
+        }
+
+        /* 3 - Muito transparente */
+        .op3 {
+            opacity: 0.2;
+        }
+
+        /* 4 - Hover com opacity */
+        .op4 {
+            opacity: 0.6;
+            transition: 0.3s;
+        }
+
+        .op4:hover {
+            opacity: 1;
+        }
+
+        /* 5 - Imagem com opacity */
+        img {
+            width: 200px;
+            opacity: 0.7;
+        }
+
+        img:hover {
+            opacity: 1;
+        }
+
+        /* 6 - Fundo transparente com rgba */
+        .op5 {
+            background-color: rgba(0, 0, 255, 0.3);
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Exemplos de Opacity</h1>
+
+    <h2>1. Opacidade normal</h2>
+    <div class="box op1">opacity: 1</div>
+
+    <h2>2. Meio transparente</h2>
+    <div class="box op2">opacity: 0.5</div>
+
+    <h2>3. Muito transparente</h2>
+    <div class="box op3">opacity: 0.2</div>
+
+    <h2>4. Hover</h2>
+    <div class="box op4">Passe o mouse</div>
+
+    <h2>5. Imagem</h2>
+    <img src="https://via.placeholder.com/200">
+
+    <h2>6. Alternativa com RGBA</h2>
+    <div class="box op5">rgba (não afeta o texto)</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Documento</title>
+</head>
+
+<body>
+    <script>
+        document.write("<h3>Arrays e seus métodos de manipulação</h3>");
+        let frutas = ["Maçã", "Banana", "Uva"]; //Criei array de frutas
+        document.write("O array frutas tem os seguintes elementos: ", frutas);
+        document.write("<br>O elemento do índice 0 é: ", frutas[0]); //Maçã
+        document.write("<h4>Adicionando e removendo elementos</h4>");
+        document.write("vou adicionar um elemento no final da lista com push()");
+        frutas.push("Laranja");
+        document.write("<br>Adicionei o elemento Laranja : ", frutas); // Maçã,Banana,Uva,Laranja
+        document.write("<br>vou adicionar um elemento no final da lista com unshift()");
+        frutas.unshift("Mamão");
+        document.write("<br>Adicionei o elemento Mamão : ", frutas); // Mamão,Maçã,Banana,Uva,Laranja
+        document.write("<br>Vou remover o elemento da última posição com o pop()");
+        frutas.pop();
+        document.write("<br>removi o último elemento: ", frutas); // Mamão,Maçã,Banana,Uva
+        document.write("<br>Vou remover o primeiro elemento da lista com shfit()");
+        frutas.shift();
+        document.write("<br>removi o primeiro elemento: ", frutas); // Maçã,Banana,Uva
+        document.write("<br>Vou remover um elemento utilizando o método splice()");
+        let numeros = [1, 2, 3];
+        document.write("<br>O array original:", numeros);
+        numeros.splice(1, 1, 10); //posição de início, item a remover,adicionar/substituir
+        document.write("<br> O array novo:", numeros); //1,10,3
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

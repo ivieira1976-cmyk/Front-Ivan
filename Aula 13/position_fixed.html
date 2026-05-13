@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo Position Fixed</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            height: 2000px; /* para gerar rolagem */
+            padding: 20px;
+        }
+
+        .box {
+            background-color: lightblue;
+            border: 2px solid blue;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        /* FIXED */
+        .fixed {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+
+            background-color: orange;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .topo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="topo">
+    Menu Fixo no Topo
+</div>
+
+<h1>Exemplo de position: fixed</h1>
+
+<p>
+O <strong>position: fixed</strong> fixa o elemento na tela, independentemente da rolagem.
+</p>
+
+<hr>
+
+<h2>Exemplo 1 – Elemento fixo no canto</h2>
+
+<div class="fixed">
+    Estou fixo no canto!
+</div>
+
+<p>
+👉 Role a página e veja que o elemento continua no mesmo lugar.
+</p>
+
+<hr>
+
+<h2>Exemplo 2 – Conteúdo para rolagem</h2>
+
+<div class="box">Conteúdo 1</div>
+<div class="box">Conteúdo 2</div>
+<div class="box">Conteúdo 3</div>
+<div class="box">Conteúdo 4</div>
+<div class="box">Conteúdo 5</div>
+<div class="box">Conteúdo 6</div>
+<div class="box">Conteúdo 7</div>
+<div class="box">Conteúdo 8</div>
+
+<p>
+👉 O menu no topo e o botão no canto permanecem fixos.
+</p>
+
+<hr>
+
+<h2>Resumo</h2>
+
+<ul>
+    <li>✔ Fica fixo na tela</li>
+    <li>✔ Não se move com scroll</li>
+    <li>✔ Usa top, left, right, bottom</li>
+    <li>✔ Muito usado em menus e botões</li>
+</ul>
+
+</body>
+</html>

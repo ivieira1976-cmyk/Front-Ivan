@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrinho de Compras</title>
+</head>
+<body>
+
+<h2>Carrinho de Compras</h2>
+
+<button onclick="inserirProdutos()">Inserir 10 Produtos</button>
+
+<h3>Lista de Produtos</h3>
+<ul id="lista"></ul>
+
+<h3 id="total"></h3>
+
+<script>
+let carrinho = [];
+
+function inserirProdutos() {
+    carrinho = [];
+    let totalCompra = 0;
+
+    for (let i = 0; i < 10; i++) {
+        let nome = prompt(`Nome do produto ${i + 1}:`);
+        let preco = parseFloat(prompt(`Preço do produto ${i + 1}:`));
+        let quantidade = parseInt(prompt(`Quantidade do produto ${i + 1}:`));
+
+        let totalProduto = preco * quantidade;
+
+        carrinho.push({
+            nome,
+            preco,
+            quantidade,
+            total: totalProduto
+        });
+
+        totalCompra += totalProduto;
+    }
+
+    mostrarProdutos(totalCompra);
+}
+
+function mostrarProdutos(totalCompra) {
+    let lista = document.getElementById("lista");
+    lista.innerHTML = "";
+
+    carrinho.forEach(produto => {
+        let item = document.createElement("li");
+        item.textContent = 
+            `Nome: ${produto.nome} | Preço: R$ ${produto.preco.toFixed(2)} | ` +
+            `Qtd: ${produto.quantidade} | Total: R$ ${produto.total.toFixed(2)}`;
+        lista.appendChild(item);
+    });
+
+    document.getElementById("total").textContent =
+        "Valor total da compra: R$ " + totalCompra.toFixed(2);
+}
+</script>
+
+</body>
+</html>
+```

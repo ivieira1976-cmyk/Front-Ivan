@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Loja Moderna</title>
+
+<style>
+:root {
+    --bg: #f5f6fa;
+    --text: #222;
+    --primary: #0d6efd;
+}
+
+.dark {
+    --bg: #1e1e1e;
+    --text: #fff;
+}
+
+body {
+    margin:0;
+    font-family: Arial;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* HEADER */
+.header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#333;
+    color:white;
+    padding:15px;
+}
+
+/* MENU */
+.menu {
+    display:flex;
+    gap:15px;
+}
+
+.menu a {
+    color:white;
+    text-decoration:none;
+}
+
+/* HAMBURGUER */
+.hamburger {
+    display:none;
+    font-size:24px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero {
+    padding:40px;
+    text-align:center;
+    background:linear-gradient(45deg, #0d6efd, #5dade2);
+    color:white;
+}
+
+/* PRODUTOS */
+.produtos {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+    gap:20px;
+    padding:20px;
+}
+
+/* CARD */
+.card {
+    background:white;
+    padding:20px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover {
+    transform:scale(1.05);
+}
+
+/* BOTÃO */
+button {
+    background:var(--primary);
+    color:white;
+    border:none;
+    padding:10px;
+    cursor:pointer;
+}
+
+/* CARRINHO */
+.cart {
+    position:fixed;
+    right:0;
+    top:0;
+    width:250px;
+    height:100%;
+    background:white;
+    padding:15px;
+    box-shadow:-5px 0 10px rgba(0,0,0,0.2);
+    display:none;
+}
+
+/* BOTÕES FIXOS */
+.toggle-dark, .open-cart {
+    position:fixed;
+    bottom:20px;
+    padding:10px;
+    color:white;
+    cursor:pointer;
+}
+
+.toggle-dark {
+    left:20px;
+    background:black;
+}
+
+.open-cart {
+    right:20px;
+    background:green;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+    .menu {
+        display:none;
+        flex-direction:column;
+        background:#444;
+        position:absolute;
+        top:60px;
+        right:0;
+        width:150px;
+        padding:10px;
+    }
+
+    .menu.active {
+        display:flex;
+    }
+
+    .hamburger {
+        display:block;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <div>LojaTech</div>
+
+    <div class="menu" id="menu">
+        <a href="#">Home</a>
+        <a href="#">Produtos</a>
+        <a href="#">Contato</a>
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+</div>
+
+<div class="hero">
+    <h1>Loja Moderna</h1>
+    <p>Design + Interatividade</p>
+</div>
+
+<div class="produtos">
+
+<div class="card">
+    <h3>Notebook</h3>
+    <p>R$ 3000</p>
+    <button onclick="addCart('Notebook')">Comprar</button>
+</div>
+
+<div class="card">
+    <h3>Mouse</h3>
+    <p>R$ 150</p>
+    <button onclick="addCart('Mouse')">Comprar</button>
+</div>
+
+<div class="card">
+    <h3>Teclado</h3>
+    <p>R$ 200</p>
+    <button onclick="addCart('Teclado')">Comprar</button>
+</div>
+
+</div>
+
+<!-- CARRINHO -->
+<div class="cart" id="cart">
+    <h3>Carrinho</h3>
+    <ul id="lista"></ul>
+</div>
+
+<!-- BOTÕES -->
+<div class="toggle-dark" onclick="toggleDark()">🌙</div>
+<div class="open-cart" onclick="toggleCart()">🛒</div>
+
+<script>
+let carrinho = [];
+
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+
+function toggleDark(){
+    document.body.classList.toggle("dark");
+}
+
+function addCart(produto){
+    carrinho.push(produto);
+    atualizarCarrinho();
+}
+
+function atualizarCarrinho(){
+    let lista = document.getElementById("lista");
+    lista.innerHTML = "";
+    carrinho.forEach(p => {
+        let li = document.createElement("li");
+        li.textContent = p;
+        lista.appendChild(li);
+    });
+}
+
+function toggleCart(){
+    let cart = document.getElementById("cart");
+    cart.style.display = cart.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>

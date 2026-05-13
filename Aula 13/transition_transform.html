@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transition e Transform</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        .box {
+            width: 150px;
+            height: 80px;
+            background-color: blue;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px 0;
+
+            /* animação suave */
+            transition: 0.3s;
+        }
+
+        /* 1 - scale (zoom) */
+        .scale:hover {
+            transform: scale(1.2);
+        }
+
+        /* 2 - rotate (rotação) */
+        .rotate:hover {
+            transform: rotate(15deg);
+        }
+
+        /* 3 - translate (movimento) */
+        .translate:hover {
+            transform: translateX(50px);
+        }
+
+        /* 4 - skew (inclinação) */
+        .skew:hover {
+            transform: skew(15deg);
+        }
+
+        /* 5 - múltiplas transformações */
+        .multi:hover {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        /* 6 - botão */
+        .btn {
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            background-color: darkgreen;
+        }
+
+        /* 7 - imagem */
+        img {
+            width: 200px;
+            transition: 0.5s;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Exemplos de Transition e Transform</h1>
+
+    <h2>1. Scale</h2>
+    <div class="box scale">Zoom</div>
+
+    <h2>2. Rotate</h2>
+    <div class="box rotate">Rotacionar</div>
+
+    <h2>3. Translate</h2>
+    <div class="box translate">Mover</div>
+
+    <h2>4. Skew</h2>
+    <div class="box skew">Inclinar</div>
+
+    <h2>5. Múltiplos efeitos</h2>
+    <div class="box multi">Combinado</div>
+
+    <h2>6. Botão</h2>
+    <button class="btn">Clique aqui</button>
+
+    <h2>7. Imagem</h2>
+    <img src="https://via.placeholder.com/200">
+
+</div>
+
+</body>
+</html>

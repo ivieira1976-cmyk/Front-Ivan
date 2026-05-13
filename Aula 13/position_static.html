@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo Position Static</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        .box {
+            background-color: lightblue;
+            border: 2px solid blue;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        /* STATIC (padrão) */
+        .static {
+            position: static;
+
+            /* NÃO FUNCIONA com static */
+            top: 50px;
+            left: 50px;
+
+            background-color: lightgreen;
+        }
+
+        .destaque {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Exemplo de position: static</h1>
+
+<p>
+O <strong>position: static</strong> é o valor padrão do CSS.
+Os elementos seguem o fluxo normal da página.
+</p>
+
+<hr>
+
+<h2>Exemplo 1 – Elementos normais</h2>
+
+<div class="box">Elemento 1</div>
+<div class="box static">Elemento 2 (static)</div>
+<div class="box">Elemento 3</div>
+
+<p>
+👉 Observe que o elemento <strong>static</strong> não muda de posição.
+</p>
+
+<hr>
+
+<h2>Exemplo 2 – Tentando mover (não funciona)</h2>
+
+<div class="box destaque">Elemento antes</div>
+
+<div class="box static">
+    Eu tenho <strong>top: 50px</strong>, mas não me movo!
+</div>
+
+<div class="box destaque">Elemento depois</div>
+
+<p>
+👉 Mesmo com <code>top</code> e <code>left</code>, o elemento NÃO se move.
+</p>
+
+<hr>
+
+<h2>Resumo</h2>
+
+<ul>
+    <li>✔ É o valor padrão</li>
+    <li>✔ Segue o fluxo normal da página</li>
+    <li>❌ Não aceita top, left, right, bottom</li>
+    <li>✔ Usado na maioria dos elementos por padrão</li>
+</ul>
+
+</body>
+</html>

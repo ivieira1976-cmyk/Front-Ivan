@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cálculo de Compra de Maçãs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            width: 300px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+        input, button {
+            padding: 10px;
+            margin-top: 10px;
+            width: 90%;
+        }
+        #resultado {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Compra de Maçãs</h2>
+        
+        <label>Quantidade de maçãs compradas:</label><br>
+        <input type="number" id="quantidade" placeholder="Digite a quantidade">
+
+        <button onclick="calcular()">Calcular</button>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        function calcular() {
+            let qtd = parseInt(document.getElementById("quantidade").value);
+            let preco;
+            let total;
+
+            if (qtd < 12) {
+                preco = 1.30;
+            } else {
+                preco = 1.00;
+            }
+
+            total = qtd * preco;
+
+            document.getElementById("resultado").innerHTML = 
+                "Total da compra: R$ " + total.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>

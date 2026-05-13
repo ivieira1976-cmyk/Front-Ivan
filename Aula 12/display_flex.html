@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Exemplo Flexbox</title>
+
+<style>
+body {
+    font-family: Arial;
+    padding: 20px;
+}
+
+/* CONTAINER FLEX */
+.container {
+    display: flex;
+    background: #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* ITENS */
+.item {
+    background: lightblue;
+    border: 2px solid blue;
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+}
+
+/* EXEMPLO 2 */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background: #eee;
+}
+
+/* EXEMPLO 3 */
+.space {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* EXEMPLO 4 */
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* EXEMPLO 5 */
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+.wrap .item {
+    width: 100px;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Exemplo de display: flex</h1>
+
+<p>
+O <strong>Flexbox</strong> organiza elementos em linha ou coluna com grande controle de alinhamento.
+</p>
+
+<hr>
+
+<h2>Exemplo 1 – Linha padrão</h2>
+
+<div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+</div>
+
+<p>👉 Itens ficam lado a lado.</p>
+
+<hr>
+
+<h2>Exemplo 2 – Centralização perfeita</h2>
+
+<div class="center">
+    <div class="item">Centro</div>
+</div>
+
+<p>👉 Centraliza horizontal e verticalmente.</p>
+
+<hr>
+
+<h2>Exemplo 3 – Espaçamento</h2>
+
+<div class="space">
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+    <div class="item">D</div>
+</div>
+
+<p>👉 Espaço entre os elementos.</p>
+
+<hr>
+
+<h2>Exemplo 4 – Direção em coluna</h2>
+
+<div class="column">
+    <div class="item">Topo</div>
+    <div class="item">Meio</div>
+    <div class="item">Base</div>
+</div>
+
+<hr>
+
+<h2>Exemplo 5 – Quebra de linha (responsivo)</h2>
+
+<div class="wrap">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+</div>
+
+<p>👉 Itens quebram linha automaticamente.</p>
+
+<hr>
+
+<h2>Resumo</h2>
+
+<ul>
+    <li>✔ Organiza layout moderno</li>
+    <li>✔ Alinhamento fácil</li>
+    <li>✔ Responsivo</li>
+    <li>✔ Substitui inline-block na maioria dos casos</li>
+</ul>
+
+</body>
+</html>

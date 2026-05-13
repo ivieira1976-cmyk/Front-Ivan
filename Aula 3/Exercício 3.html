@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=“UTF-8”>
+  <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
+  <title>Document</title>
+</head>
+<body>
+
+    <h2>Digite sua nota:</h2>
+
+    <input type="number" id="nota" placeholder="Digite a nota">
+    <button onclick="classificarNota()">Classificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function classificarNota() {
+            let nota = parseFloat(document.getElementById("nota").value);
+            let mensagem = "";
+
+            if (nota >= 9) {
+                mensagem = "Excelente";
+            } else if (nota >= 7) {
+                mensagem = "Bom";
+            } else if (nota >= 5) {
+                mensagem = "Regular";
+            } else {
+                mensagem = "Insuficiente";
+            }
+
+            document.getElementById("resultado").innerText =
+                "A nota digitada foi " + nota + " - Classificação: " + mensagem;
+        }
+    </script>
+
+</body>
+</html>

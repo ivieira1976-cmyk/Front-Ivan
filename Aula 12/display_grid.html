@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Exemplo CSS Grid</title>
+
+<style>
+body {
+    font-family: Arial;
+    padding: 20px;
+}
+
+/* CONTAINER GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+    gap: 10px;
+    background: #ddd;
+    padding: 10px;
+}
+
+/* ITENS */
+.item {
+    background: lightblue;
+    border: 2px solid blue;
+    padding: 20px;
+    text-align: center;
+}
+
+/* EXEMPLO 2 */
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.header {
+    grid-column: 1 / 3;
+    background: black;
+    color: white;
+    padding: 10px;
+}
+
+.menu {
+    background: orange;
+    padding: 10px;
+}
+
+.conteudo {
+    background: lightgreen;
+    padding: 10px;
+}
+
+.footer {
+    grid-column: 1 / 3;
+    background: gray;
+    color: white;
+    padding: 10px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .header, .footer {
+        grid-column: auto;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<h1>Exemplo de display: grid</h1>
+
+<p>
+O <strong>CSS Grid</strong> permite criar layouts em grade (linhas e colunas).
+</p>
+
+<hr>
+
+<h2>Exemplo 1 – Grade simples</h2>
+
+<div class="grid">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+</div>
+
+<p>👉 3 colunas organizadas automaticamente.</p>
+
+<hr>
+
+<h2>Exemplo 2 – Layout de página</h2>
+
+<div class="layout">
+
+    <div class="header">Header</div>
+
+    <div class="menu">Menu</div>
+
+    <div class="conteudo">Conteúdo principal</div>
+
+    <div class="footer">Footer</div>
+
+</div>
+
+<p>
+👉 Estrutura típica de site com Grid.
+</p>
+
+<hr>
+
+<h2>Resumo</h2>
+
+<ul>
+    <li>✔ Layout em linhas e colunas</li>
+    <li>✔ Controle total da página</li>
+    <li>✔ Muito poderoso para layouts complexos</li>
+    <li>✔ Responsivo facilmente</li>
+</ul>
+
+</body>
+</html>

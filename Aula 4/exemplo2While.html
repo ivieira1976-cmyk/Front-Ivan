@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=“UTF-8”>
+    <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let contador = 0;
+        let mensagem = "";
+        while (contador < 5) {
+            mensagem = mensagem + "Contador é: " + contador + "\n"; //acumulador
+            contador++; // incremento para evitar loop infinito
+        }
+        alert(mensagem);
+    </script>
+</body>
+
+</html>

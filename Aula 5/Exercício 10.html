@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabuada</title>
+</head>
+<body>
+
+<h2>Tabuada de 1 a 10</h2>
+
+<button onclick="mostrarTabuada()">Mostrar Tabuada</button>
+
+<p id="resultado"></p>
+
+<script>
+function mostrarTabuada() {
+    let texto = "";
+
+    for (let i = 1; i <= 10; i++) {
+        texto += "<br><strong>Tabuada do " + i + "</strong><br>";
+
+        for (let j = 1; j <= 10; j++) {
+            texto += i + " x " + j + " = " + (i * j) + "<br>";
+        }
+    }
+
+    document.getElementById("resultado").innerHTML = texto;
+}
+</script>
+
+</body>
+</html>

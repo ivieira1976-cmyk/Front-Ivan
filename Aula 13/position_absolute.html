@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo Position Absolute</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        .box {
+            background-color: lightblue;
+            border: 2px solid blue;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        /* CONTAINER PAI */
+        .pai {
+            position: relative; /* referência para o absolute */
+            height: 200px;
+            background-color: #ddd;
+            border: 2px dashed black;
+            margin-top: 20px;
+        }
+
+        /* ELEMENTO ABSOLUTO */
+        .absolute {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+
+            background-color: orange;
+            padding: 10px;
+        }
+
+        .destaque {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Exemplo de position: absolute</h1>
+
+<p>
+O <strong>position: absolute</strong> retira o elemento do fluxo normal da página
+e posiciona ele em relação ao elemento pai com <code>position: relative</code>.
+</p>
+
+<hr>
+
+<h2>Exemplo 1 – Dentro de um container</h2>
+
+<div class="pai">
+    <div class="absolute">Sou absolute (top: 20px, left: 20px)</div>
+</div>
+
+<p>
+👉 O elemento foi posicionado dentro do container pai.
+</p>
+
+<hr>
+
+<h2>Exemplo 2 – Sobrepondo elementos</h2>
+
+<div class="pai">
+    <div class="box destaque">Elemento normal</div>
+
+    <div class="absolute">
+        Estou sobrepondo!
+    </div>
+</div>
+
+<p>
+👉 O elemento <strong>absolute</strong> pode ficar por cima dos outros.
+</p>
+
+<hr>
+
+<h2>Exemplo 3 – Sem pai com relative</h2>
+
+<div class="absolute" style="top: 50px; right: 50px;">
+    Referência é a tela (body)
+</div>
+
+<p>
+👉 Quando não há um pai com <code>position: relative</code>, o elemento se posiciona em relação à página.
+</p>
+
+<hr>
+
+<h2>Resumo</h2>
+
+<ul>
+    <li>✔ Sai do fluxo normal</li>
+    <li>✔ Pode usar top, left, right, bottom</li>
+    <li>✔ Posiciona em relação ao pai com relative</li>
+    <li>✔ Pode sobrepor elementos</li>
+</ul>
+
+</body>
+</html>

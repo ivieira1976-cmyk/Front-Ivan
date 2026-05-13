@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site com Grid e Cards</title>
+    <style>
+        /* Estrutura Base */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f0f2f5;
+        }
+
+        header {
+            background-color: #12192c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #12192c;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+        }
+
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Sistema de Grid (Exercício 21) */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr; /* Proporção solicitada */
+            gap: 20px;
+        }
+
+        /* Estilo dos Cards */
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden; /* Garante que a imagem respeite o arredondamento */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover; /* Ajusta a imagem sem distorcer */
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .card-title {
+            margin: 0 0 10px 0;
+            font-size: 1.25rem;
+            color: #333;
+        }
+
+        .card-text {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Responsividade básica */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr; /* Em telas pequenas, vira uma coluna */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Meu Site</h1>
+    </header>
+
+    <main>
+        <section class="grid-container">
+            
+            <!-- Card 1 (Coluna Esquerda - 1fr) -->
+            <article class="card">
+                <img src="https://picsum.photos/300/300?random=1" alt="Imagem Aleatória">
+                <div class="card-body">
+                    <h3 class="card-title">Título do Card 1</h3>
+                    <p class="card-text">Este é o conteúdo do primeiro card, localizado na coluna lateral esquerda.</p>
+                </div>
+            </article>
+
+            <!-- Card 2 (Coluna Centro - 2fr) -->
+            <article class="card">
+                <img src="https://picsum.photos/600/300?random=2" alt="Imagem Aleatória">
+                <div class="card-body">
+                    <h3 class="card-title">Destaque Central</h3>
+                    <p class="card-text">Este card ocupa a coluna central, que possui o dobro do tamanho das laterais conforme a estrutura de 2 frações (2fr).</p>
+                </div>
+            </article>
+
+            <!-- Card 3 (Coluna Direita - 1fr) -->
+            <article class="card">
+                <img src="https://picsum.photos/300/300?random=3" alt="Imagem Aleatória">
+                <div class="card-body">
+                    <h3 class="card-title">Título do Card 3</h3>
+                    <p class="card-text">Conteúdo do terceiro card na coluna lateral direita, finalizando o layout.</p>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Rodapé do site</p>
+    </footer>
+
+</body>
+</html>

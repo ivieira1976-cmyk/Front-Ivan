@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplos de Cursor</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        .box {
+            width: 200px;
+            height: 60px;
+            margin: 10px 0;
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+        }
+
+        /* Tipos de cursor */
+        .pointer { cursor: pointer; }
+        .default { cursor: default; }
+        .text { cursor: text; }
+        .move { cursor: move; }
+        .not-allowed { cursor: not-allowed; }
+        .wait { cursor: wait; }
+        .crosshair { cursor: crosshair; }
+
+        /* Botão */
+        .btn {
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Link */
+        a {
+            text-decoration: none;
+            color: blue;
+            cursor: pointer;
+        }
+
+        /* Área de texto */
+        input {
+            padding: 5px;
+            cursor: text;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Exemplos de Cursor</h1>
+
+    <h2>Tipos básicos</h2>
+    <div class="box pointer">pointer (clique)</div>
+    <div class="box default">default</div>
+    <div class="box text">text</div>
+    <div class="box move">move</div>
+    <div class="box not-allowed">not-allowed</div>
+    <div class="box wait">wait</div>
+    <div class="box crosshair">crosshair</div>
+
+    <h2>Uso real</h2>
+
+    <button class="btn">Botão</button><br><br>
+
+    <a href="#">Link</a><br><br>
+
+    <input type="text" placeholder="Digite aqui">
+
+</div>
+
+</body>
+</html>

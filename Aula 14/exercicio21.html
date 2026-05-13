@@ -1,0 +1,79 @@
+html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura Completa com Grid</title>
+    <style>
+        /* Estilos da Estrutura Básica */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #12192c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #12192c;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Estilos do Conteúdo Principal e Grid */
+        main {
+            flex: 1;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            /* Aplicação do Exercício 21: 1fr, 2fr, 1fr */
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .coluna {
+            padding: 30px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            text-align: center;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Meu Site</h1>
+    </header>
+
+    <main>
+        <h2>Conteúdo Principal</h2>
+        <p>Abaixo, a estrutura de 3 colunas aplicada com Grid Layout:</p>
+
+        <!-- Seção do Exercício 21 integrada -->
+        <div class="grid-container">
+            <div class="coluna">Esquerda (1fr)</div>
+            <div class="coluna">Centro (2fr)</div>
+            <div class="coluna">Direita (1fr)</div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Rodapé do site</p>
+    </footer>
+
+</body>
+</html>

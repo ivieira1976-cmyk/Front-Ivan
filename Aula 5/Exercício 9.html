@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Média com FOR</title>
+</head>
+<body>
+
+<h2>Cálculo de Média (FOR)</h2>
+<button onclick="calcularMediaFor()">Calcular Média</button>
+
+<p id="resultadoFor"></p>
+
+<script>
+function calcularMediaFor() {
+    let soma = 0;
+    let nota;
+
+    for (let i = 1; i <= 10; i++) {
+        nota = parseFloat(prompt("Digite a nota " + i + ":")); //acumulo na variável soma
+        soma += nota;
+    }
+
+    let media = soma / 10;
+
+    document.getElementById("resultadoFor").innerHTML =
+        "A média das notas é: " + media.toFixed(2);
+}
+</script>
+
+</body>
+</html>

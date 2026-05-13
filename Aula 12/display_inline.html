@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Exemplo Display Inline</title>
+
+<style>
+body {
+    font-family: Arial;
+    padding: 20px;
+}
+
+/* ELEMENTOS INLINE */
+.inline {
+    background: orange;
+    padding: 5px;
+}
+
+/* FORÇANDO ELEMENTOS PARA INLINE */
+.inline-div {
+    display: inline;
+    background: lightgreen;
+    padding: 10px;
+    border: 2px solid green;
+}
+
+/* MENU HORIZONTAL */
+.menu a {
+    display: inline;
+    background: #333;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.menu a:hover {
+    background: #555;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Exemplo de display: inline</h1>
+
+<p>
+O <strong>display: inline</strong> faz com que o elemento fique na mesma linha que outros elementos.
+</p>
+
+<hr>
+
+<h2>Exemplo 1 – Elementos inline padrão</h2>
+
+<span class="inline">Texto 1</span>
+<span class="inline">Texto 2</span>
+<span class="inline">Texto 3</span>
+
+<p>
+👉 Os elementos ficam lado a lado.
+</p>
+
+<hr>
+
+<h2>Exemplo 2 – Transformando div em inline</h2>
+
+<div class="inline-div">DIV 1</div>
+<div class="inline-div">DIV 2</div>
+<div class="inline-div">DIV 3</div>
+
+<p>
+👉 Agora as <code>div</code> não quebram linha.
+</p>
+
+<hr>
+
+<h2>Exemplo 3 – Menu horizontal</h2>
+
+<div class="menu">
+    <a href="#">Home</a>
+    <a href="#">Produtos</a>
+    <a href="#">Contato</a>
+</div>
+
+<p>
+👉 Links ficam lado a lado formando um menu horizontal.
+</p>
+
+<hr>
+
+<h2>Exemplo 4 – Limitação do inline</h2>
+
+<span style="background: lightblue; width: 200px; height: 100px;">
+    Tente aplicar width/height
+</span>
+
+<p>
+👉 Elementos inline NÃO respeitam largura e altura.
+</p>
+
+<hr>
+
+<h2>Resumo</h2>
+
+<ul>
+    <li>✔ Ficam na mesma linha</li>
+    <li>✔ Não quebram linha</li>
+    <li>❌ Não aceitam width e height</li>
+    <li>✔ Usados para textos e links</li>
+</ul>
+
+</body>
+</html>
