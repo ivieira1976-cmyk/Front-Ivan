@@ -1,107 +1,98 @@
-/* Reset básico */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/* Configurações Gerais */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f2f5;
-    padding: 40px 20px;
+    background-color: #f4f4f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Alteração de fonte */
+    color: #333;
+    margin: 0;
+    padding: 20px;
 }
 
-.main-header {
-    text-align: center;
-    margin-bottom: 50px;
+/* Container Responsivo com Box Model */
+.container {
+    max-width: 800px; /* Largura máxima */
+    margin: 0 auto;   /* Centraliza o contêiner */
+    background-color: #fff;
+    padding: 40px;    /* Espaçamento interno */
+    border: 1px solid #ddd; /* Borda leve */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para destaque */
 }
 
-.main-header h1 {
+/* Estilização de Títulos (Destaques) */
+h1 {
     color: #2c3e50;
     font-size: 2.5rem;
+    margin-bottom: 5px;
 }
 
-/* Container de Produtos (Flexbox) */
-.product-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap; /* Garante que quebre a linha em telas menores */
-    max-width: 1200px;
-    margin: 0 auto;
+h2 {
+    color: #7f8c8d;
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-top: 0;
 }
 
-/* Estilização do Card com Box-Shadow */
-.card {
-    background-color: #fff;
-    width: 300px;
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
-    transition: transform 0.3s ease;
-    /* Box Model e Sombra */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+h3 {
+    color: #2980b9; /* Cor de destaque para subtítulos */
+    border-left: 5px solid #2980b9; /* Detalhe visual lateral */
+    padding-left: 10px;
+    margin-top: 25px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
 }
 
-/* Efeito ao passar o mouse */
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* Imagem em formato de círculo com borda */
-.image-wrapper img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; /* Torna a imagem circular */
-    border: 4px solid #3498db; /* Borda colorida */
-    object-fit: cover;
+/* Imagem e Layout */
+.foto-perfil {
+    border-radius: 50%; /* Foto redonda */
+    border: 3px solid #2980b9;
+    display: block;
     margin-bottom: 20px;
 }
 
-.card h3 {
-    margin-bottom: 15px;
+/* Listas e Parágrafos */
+p, li {
+    line-height: 1.6; /* Melhor legibilidade */
+    font-size: 1rem;
+}
+
+/* Tabela Estilizada */
+.tabela-exp {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.tabela-exp th, .tabela-exp td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.tabela-exp th {
+    background-color: #f8f9fa;
     color: #2c3e50;
 }
 
-.card p {
-    font-size: 0.9rem;
-    color: #7f8c8d;
-    margin-bottom: 20px;
-    line-height: 1.4;
-}
-
-.price {
-    font-size: 1.4rem;
+/* Estilização de Links */
+.links a {
+    text-decoration: none;
+    color: #2980b9;
     font-weight: bold;
-    color: #27ae60;
-    margin-bottom: 20px;
+    margin-right: 15px;
 }
 
-/* Botão de Compra */
-.buy-btn {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 25px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100%;
+.links a:hover {
+    color: #1a5276;
+    text-decoration: underline;
 }
 
-.buy-btn:hover {
-    background-color: #2980b9;
-}
-
-/* Responsividade para Mobile */
-@media (max-width: 768px) {
-    .product-container {
-        flex-direction: column;
-        align-items: center;
+/* Responsividade Básica para Celulares */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
     }
 }

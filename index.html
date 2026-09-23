@@ -3,50 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vitrine de Produtos</title>
+    <title>Currículo Profissional</title>
+    <!-- Vinculação do CSS Externo -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="main-header">
-        <h1>Nossas Ofertas</h1>
-        <p>Produtos selecionados com tecnologia de ponta</p>
-    </header>
+    <div class="container">
+        <header>
+            <img src="https://via.placeholder.com/150" alt="Foto do Candidato" class="foto-perfil">
+            <h1>João da Silva Souza</h1>
+            <h2>Analista de TI e Estudante de Matemática</h2>
+        </header>
 
-    <main class="product-container">
-        <!-- Produto 1 -->
-        <article class="card">
-            <div class="image-wrapper">
-                <img src="https://via.placeholder.com/200" alt="Produto 1">
-            </div>
-            <h3>Kit Desenvolvedor</h3>
-            <p>Acessórios essenciais para aumentar sua produtividade no código.</p>
-            <span class="price">R$ 299,00</span>
-            <button class="buy-btn">Comprar Agora</button>
-        </article>
+        <hr>
 
-        <!-- Produto 2 -->
-        <article class="card">
-            <div class="image-wrapper">
-                <img src="https://via.placeholder.com/200" alt="Produto 2">
-            </div>
-            <h3>Curso de Python Pro</h3>
-            <p>Do zero ao avançado com foco em automação e web scraping.</p>
-            <span class="price">R$ 450,00</span>
-            <button class="buy-btn">Comprar Agora</button>
-        </article>
+        <section>
+            <h3>Informações Pessoais</h3>
+            <ul>
+                <li><strong>E-mail:</strong> joao.silva@email.com</li>
+                <li><strong>Telefone:</strong> (51) 99999-9999</li>
+                <li><strong>Cidade:</strong> Novo Hamburgo - RS</li>
+            </ul>
+        </section>
 
-        <!-- Produto 3 -->
-        <article class="card">
-            <div class="image-wrapper">
-                <img src="https://via.placeholder.com/200" alt="Produto 3">
+        <section>
+            <h3>Objetivo Profissional</h3>
+            <p>Busco atuar na área de educação tecnológica, integrando conhecimentos técnicos de TI com a prática pedagógica da matemática para contribuir no desenvolvimento profissional de novos estudantes.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h3>Formação Acadêmica</h3>
+            <ol>
+                <li>Licenciatura em Matemática (Em andamento)</li>
+                <li>Especialização em Docência para a Educação Profissional e Tecnológica</li>
+                <li>Graduação em Gestão de TI</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Habilidades</h3>
+            <ul class="habilidades-lista">
+                <li>Desenvolvimento em Python (FastAPI e BeautifulSoup)</li>
+                <li>Gestão de Sistemas Operacionais e Hardware</li>
+                <li>Metodologias de Ensino a Distância (EAD)</li>
+                <li>Lógica de Programação e Estruturas de Dados</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h3>Experiência Profissional</h3>
+            <p>Atuação sólida no setor público e privado, com foco em suporte técnico e análise de sistemas.</p>
+
+            <table class="tabela-exp">
+                <thead>
+                    <tr>
+                        <th>Empresa / Órgão</th>
+                        <th>Cargo</th>
+                        <th>Período</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Prefeitura Municipal</td>
+                        <td>Analista de TI</td>
+                        <td>2015 - Atual</td>
+                    </tr>
+                    <tr>
+                        <td>Empresa de Tecnologia S.A.</td>
+                        <td>Técnico de Suporte</td>
+                        <td>2010 - 2015</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <footer>
+            <h3>Redes e Contatos</h3>
+            <div class="links">
+                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                <a href="https://www.github.com" target="_blank">GitHub</a>
             </div>
-            <h3>Mentoria de Carreira</h3>
-            <p>Acelere sua transição para o mercado de TI com especialistas.</p>
-            <span class="price">R$ 800,00</span>
-            <button class="buy-btn">Comprar Agora</button>
-        </article>
-    </main>
+        </footer>
+    </div>
 
 </body>
 </html>
