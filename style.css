@@ -1,98 +1,17 @@
-/* Configurações Gerais */
-body {
-    background-color: #f4f4f9;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Alteração de fonte */
-    color: #333;
-    margin: 0;
-    padding: 20px;
+body{
+    background-color:#f4f6f9;
 }
 
-/* Container Responsivo com Box Model */
-.container {
-    max-width: 800px; /* Largura máxima */
-    margin: 0 auto;   /* Centraliza o contêiner */
-    background-color: #fff;
-    padding: 40px;    /* Espaçamento interno */
-    border: 1px solid #ddd; /* Borda leve */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para destaque */
+.card{
+    border-radius:15px;
 }
 
-/* Estilização de Títulos (Destaques) */
-h1 {
-    color: #2c3e50;
-    font-size: 2.5rem;
-    margin-bottom: 5px;
+.navbar-brand{
+    font-weight:bold;
 }
 
-h2 {
-    color: #7f8c8d;
-    font-size: 1.2rem;
-    font-weight: normal;
-    margin-top: 0;
-}
-
-h3 {
-    color: #2980b9; /* Cor de destaque para subtítulos */
-    border-left: 5px solid #2980b9; /* Detalhe visual lateral */
-    padding-left: 10px;
-    margin-top: 25px;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-}
-
-/* Imagem e Layout */
-.foto-perfil {
-    border-radius: 50%; /* Foto redonda */
-    border: 3px solid #2980b9;
-    display: block;
-    margin-bottom: 20px;
-}
-
-/* Listas e Parágrafos */
-p, li {
-    line-height: 1.6; /* Melhor legibilidade */
-    font-size: 1rem;
-}
-
-/* Tabela Estilizada */
-.tabela-exp {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-}
-
-.tabela-exp th, .tabela-exp td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #eee;
-}
-
-.tabela-exp th {
-    background-color: #f8f9fa;
-    color: #2c3e50;
-}
-
-/* Estilização de Links */
-.links a {
-    text-decoration: none;
-    color: #2980b9;
-    font-weight: bold;
-    margin-right: 15px;
-}
-
-.links a:hover {
-    color: #1a5276;
-    text-decoration: underline;
-}
-
-/* Responsividade Básica para Celulares */
-@media (max-width: 600px) {
-    .container {
-        padding: 20px;
-    }
-    
-    h1 {
-        font-size: 1.8rem;
-    }
+.usuario-logado{
+    color:white;
+    font-weight:bold;
+    margin-right:15px;
 }
