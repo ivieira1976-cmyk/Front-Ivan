@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Palavras</title>
+</head>
+<body>
+
+    <h2>Digite uma frase:</h2>
+
+    <input type="text" id="frase" size="50">
+    <br><br>
+
+    <button onclick="separarPalavras()">Separar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function separarPalavras() {
+            var texto = document.getElementById("frase").value;
+
+            // Remove espaços no início e no fim
+            var textoLimpo = texto.trim();
+
+            // Separa as palavras
+            var palavras = textoLimpo.split(" ");
+
+            // Remove possíveis espaços vazios
+            var listaPalavras = [];
+
+            for (var i = 0; i < palavras.length; i++) {
+                if (palavras[i] !== "") {
+                    listaPalavras.push(palavras[i]);
+                }
+            }
+
+            // Conta quantidade de palavras
+            var quantidade = listaPalavras.length;
+
+            // Exibe resultado
+            document.getElementById("resultado").innerHTML =
+                "Palavras: " + listaPalavras.join(", ") + "<br>" +
+                "Quantidade de palavras: " + quantidade;
+        }
+    </script>
+
+</body>
+</html>

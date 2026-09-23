@@ -1,0 +1,175 @@
+# Arquivo HTML (index.html)
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo Pessoal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>João da Silva</h1>
+    <h2>Desenvolvedor Web</h2>
+
+    <img src="foto.jpg" alt="Foto de João da Silva" class="foto">
+
+    <h3>Informações Pessoais</h3>
+    <ul>
+        <li>Email: joao@email.com</li>
+        <li>Telefone: (54) 99999-9999</li>
+        <li>Cidade: Passo Fundo - RS</li>
+    </ul>
+
+    <h3>Objetivo Profissional</h3>
+    <p>Atuar na área de tecnologia, contribuindo com meus conhecimentos e buscando crescimento profissional.</p>
+
+    <h3>Experiência Profissional</h3>
+    <p><strong>Empresa ABC</strong> - Desenvolvedor Front-end (2022 - 2024)</p>
+    <p>Criação de sites responsivos e manutenção de sistemas web.</p>
+
+    <p><strong>Empresa XYZ</strong> - Suporte Técnico (2020 - 2022)</p>
+    <p>Atendimento a usuários e manutenção de computadores.</p>
+
+    <h3>Tabela de Experiências</h3>
+    <table>
+        <tr>
+            <th>Empresa</th>
+            <th>Cargo</th>
+            <th>Período</th>
+        </tr>
+        <tr>
+            <td>Empresa ABC</td>
+            <td>Desenvolvedor Front-end</td>
+            <td>2022 - 2024</td>
+        </tr>
+        <tr>
+            <td>Empresa XYZ</td>
+            <td>Suporte Técnico</td>
+            <td>2020 - 2022</td>
+        </tr>
+    </table>
+
+    <h3>Formação Acadêmica</h3>
+    <ul>
+        <li>Técnico em Informática</li>
+        <li>Graduação em Sistemas de Informação</li>
+    </ul>
+
+    <h3>Habilidades</h3>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Trabalho em equipe</li>
+    </ul>
+
+    <h3>Links</h3>
+    <a href="https://www.linkedin.com" target="_blank">LinkedIn</a><br>
+    <a href="https://www.github.com" target="_blank">GitHub</a>
+
+</div>
+
+</body>
+</html>
+```
+
+# Arquivo CSS Externo (style.css)
+
+```css
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 900px;
+    width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid #cccccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: darkblue;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: gray;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 0;
+}
+
+h3 {
+    background-color: #dbeafe;
+    padding: 10px;
+    border-left: 5px solid blue;
+    font-size: 22px;
+}
+
+p, li, a {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.foto {
+    display: block;
+    margin: 20px auto;
+    width: 150px;
+    border-radius: 50%;
+    border: 3px solid #999;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #999;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #e5e7eb;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p, li, a {
+        font-size: 16px;
+    }
+}
+```
+

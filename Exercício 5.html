@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Login</title>
+</head>
+
+<body>
+
+  <h2>Login do Sistema</h2>
+
+  <input type="text" id="usuario" placeholder="Digite o usuário"><br><br>
+  <input type="password" id="senha" placeholder="Digite a senha"><br><br>
+
+  <button onclick="verificarLogin()">Entrar</button>
+
+  <p id="resultado"></p>
+
+  <script>
+    function verificarLogin() {
+      let usuario = document.getElementById("usuario").value;
+      let senha = document.getElementById("senha").value;
+
+      let usuarioCorreto = "admin";
+      let senhaCorreta = "1234";
+
+      if (usuario !== usuarioCorreto) {
+        document.getElementById("resultado").innerText = "Usuário não encontrado!";
+      } else if (senha !== senhaCorreta) {
+        document.getElementById("resultado").innerText = "Senha Incorreta!";
+      } else {
+        document.getElementById("resultado").innerText = "Acesso Permitido!";
+      }
+    }
+  </script>
+
+</body>
+</html>

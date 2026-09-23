@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior de Três Números</title>
+</head>
+
+<body>
+
+    <h2>Digite três números:</h2>
+
+    <input type="number" id="num1" placeholder="Primeiro número"><br><br>
+    <input type="number" id="num2" placeholder="Segundo número"><br><br>
+    <input type="number" id="num3" placeholder="Terceiro número"><br><br>
+
+    <button onclick="verificarMaior()">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function verificarMaior() {
+            let n1 = parseFloat(document.getElementById("num1").value);
+            let n2 = parseFloat(document.getElementById("num2").value);
+            let n3 = parseFloat(document.getElementById("num3").value);
+
+            let maior;
+
+            if (n1 >= n2 && n1 >= n3) {
+                maior = n1;
+            } else if (n2 >= n1 && n2 >= n3) {
+                maior = n2;
+            } else {
+                maior = n3;
+            }
+
+            document.getElementById("resultado").innerText =
+                "O maior número digitado foi: " + maior;
+        }
+    </script>
+
+</body>
+
+</html>

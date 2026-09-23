@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Compra de Maçãs</title>
+</head>
+<body>
+
+    <h2>Calcular valor da compra de maçãs</h2>
+
+    <label>Digite a quantidade de maçãs:</label>
+    <input type="number" id="quantidade"><br><br>
+
+    <button onclick="calcularCompra()">Calcular</button>
+
+    <h3 id="resultado"></h3>
+
+    <script>
+        function calcularCompra() {
+            let qtd = Number(document.getElementById("quantidade").value);
+            let preco;
+            let total;
+
+            if (qtd < 12) {
+                preco = 1.30;
+            } else {
+                preco = 1.00;
+            }
+
+            total = qtd * preco;
+
+            document.getElementById("resultado").innerText =
+                "Total da compra: R$ " + total.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>

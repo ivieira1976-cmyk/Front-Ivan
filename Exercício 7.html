@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Validação de Sexo</title>
+</head>
+<body>
+
+    <h2>Informe o sexo</h2>
+
+    <label>Digite F para Feminino ou M para Masculino:</label>
+    <input type="text" id="sexo" maxlength="1"><br><br>
+
+    <button onclick="validarSexo()">Enviar</button>
+
+    <h3 id="mensagem"></h3>
+
+    <script>
+        function validarSexo() {
+            let entrada = document.getElementById("sexo").value.toLowerCase();
+
+            while (entrada !== "f" && entrada !== "m") {
+                alert("Resposta errada! Digite 'F' ou 'M'");
+                entrada = prompt("Digite F para Feminino ou M para Masculino:").toLowerCase();
+            }
+
+            if (entrada === "f") {
+                document.getElementById("mensagem").innerText = "Sexo Feminino selecionado.";
+            } else {
+                document.getElementById("mensagem").innerText = "Sexo Masculino selecionado.";
+            }
+        }
+    </script>
+
+</body>

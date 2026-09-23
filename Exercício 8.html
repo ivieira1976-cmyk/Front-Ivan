@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cálculo de Média</title>
+</head>
+<body>
+
+    <h2>Cálculo de Média do Aluno</h2>
+
+    <button onclick="iniciarCalculo()">Iniciar</button>
+
+    <script>
+        function iniciarCalculo() {
+            let continuar = "s";
+
+            while (continuar === "s") {
+                let nota1 = Number(prompt("Digite a 1ª nota:"));
+                let nota2 = Number(prompt("Digite a 2ª nota:"));
+
+                let media = (nota1 + nota2) / 2;
+
+                alert("Média do aluno: " + media.toFixed(2));
+
+                continuar = prompt("NOVO CÁLCULO (S/N)?").toLowerCase();
+            }
+
+            alert("Programa encerrado.");
+        }
+    </script>
+
+</body>
+</html>

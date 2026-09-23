@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formatação de Frase</title>
+</head>
+<body>
+
+    <h2>Digite uma frase:</h2>
+
+    <input type="text" id="frase" size="50">
+    <br><br>
+
+    <button onclick="processarFrase()">Processar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function processarFrase() {
+            var texto = document.getElementById("frase").value;
+
+            // Remove espaços extras no início e fim
+            var textoLimpo = texto.trim();
+
+            // Coloca cada palavra com a primeira letra maiúscula
+            var palavras = textoLimpo.split(" ");
+            var fraseFormatada = "";
+
+            for (var i = 0; i < palavras.length; i++) {
+                if (palavras[i].length > 0) {
+                    fraseFormatada += palavras[i][0].toUpperCase() + palavras[i].slice(1).toLowerCase() + " ";
+                }
+            }
+
+            // Remove espaço extra no final
+            fraseFormatada = fraseFormatada.trim();
+
+            // Verifica se termina com ponto final
+            var terminaComPonto = textoLimpo.endsWith(".");
+
+            // Exibe resultado
+            document.getElementById("resultado").innerHTML =
+                "Frase formatada: " + fraseFormatada + "<br>" +
+                "Termina com ponto final? " + (terminaComPonto ? "Sim" : "Não");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Substituir Vogais</title>
+</head>
+<body>
+
+    <h2>Digite uma frase:</h2>
+
+    <input type="text" id="frase" size="50">
+    <br><br>
+
+    <button onclick="substituirVogais()">Substituir</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function substituirVogais() {
+            var texto = document.getElementById("frase").value;
+
+            // Substitui todas as vogais por *
+            var novaFrase = texto.replace(/[aeiouAEIOU]/g, "*");
+
+            // Exibe resultado
+            document.getElementById("resultado").innerHTML =
+                "Nova frase: " + novaFrase;
+        }
+    </script>
+
+</body>
+</html>

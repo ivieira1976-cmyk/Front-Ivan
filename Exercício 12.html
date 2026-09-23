@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Contador de Frase</title>
+</head>
+<body>
+
+    <h2>Digite uma frase:</h2>
+
+    <input type="text" id="frase" size="50">
+    <br><br>
+
+    <button onclick="analisarFrase()">Analisar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function analisarFrase() {
+            var texto = document.getElementById("frase").value;
+
+            // Remove espaços do início e do fim
+            var textoSemEspacos = texto.trim();
+
+            // Conta caracteres (sem espaços no início e fim)
+            var quantidadeCaracteres = textoSemEspacos.length;
+
+            // Conta letras "a" (maiúsculas e minúsculas)
+            var contadorA = 0;
+
+            for (var i = 0; i < textoSemEspacos.length; i++) {
+                if (textoSemEspacos[i].toLowerCase() === 'a') {
+                    contadorA++;
+                }
+            }
+
+            // Exibe resultado
+            document.getElementById("resultado").innerHTML =
+                "Quantidade de caracteres: " + quantidadeCaracteres + "<br>" +
+                "Quantidade de letras 'a': " + contadorA;
+        }
+    </script>
+
+</body>
+</html>
