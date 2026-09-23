@@ -1,0 +1,107 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    padding: 40px 20px;
+}
+
+.main-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.main-header h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+}
+
+/* Container de Produtos (Flexbox) */
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Garante que quebre a linha em telas menores */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilização do Card com Box-Shadow */
+.card {
+    background-color: #fff;
+    width: 300px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    /* Box Model e Sombra */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Efeito ao passar o mouse */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagem em formato de círculo com borda */
+.image-wrapper img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Torna a imagem circular */
+    border: 4px solid #3498db; /* Borda colorida */
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #27ae60;
+    margin-bottom: 20px;
+}
+
+/* Botão de Compra */
+.buy-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.buy-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Responsividade para Mobile */
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
