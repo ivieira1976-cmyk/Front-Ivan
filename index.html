@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AgendaPro Beauty: encontre serviços de beleza e agende seu horário online.">
+    <title>AgendaPro Beauty</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Biblioteca de ícones SVG: evita depender de bibliotecas externas. -->
+    <svg class="svg-library" aria-hidden="true">
+        <symbol id="i-lotus" viewBox="0 0 64 64">
+            <path d="M32 48C19 48 9 41 6 31c9-1 17 2 22 8-1-10 3-19 4-22 2 3 6 12 4 22 5-6 13-9 22-8-3 10-13 17-26 17Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M20 29c1-8 5-14 12-19 7 5 11 11 12 19M12 34c-2-7-1-12 2-17 7 1 12 5 16 11M52 34c2-7 1-12-2-17-7 1-12 5-16 11" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="i-calendar" viewBox="0 0 24 24">
+            <path d="M6 2v3M18 2v3M3 9h18M5 4h14a2 2 0 0 1 2 2v14H3V6a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7 13h3v3H7zM14 13h3v3h-3z" fill="currentColor"/>
+        </symbol>
+        <symbol id="i-search" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="m16 16 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="i-moon" viewBox="0 0 24 24">
+            <path d="M20 15.4A8 8 0 0 1 8.6 4 8.5 8.5 0 1 0 20 15.4Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="i-star" viewBox="0 0 24 24">
+            <path d="m12 2.7 2.8 5.7 6.3.9-4.6 4.4 1.1 6.3-5.6-3-5.6 3 1.1-6.3-4.6-4.4 6.3-.9L12 2.7Z" fill="currentColor"/>
+        </symbol>
+        <symbol id="i-users" viewBox="0 0 24 24">
+            <circle cx="9" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+            <circle cx="17" cy="9" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M3 20v-2a5 5 0 0 1 5-5h2a5 5 0 0 1 5 5v2M15 14h1a4 4 0 0 1 4 4v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="i-person" viewBox="0 0 24 24">
+            <circle cx="12" cy="7" r="4" fill="currentColor"/>
+            <path d="M4 22v-2a8 8 0 0 1 16 0v2Z" fill="currentColor"/>
+        </symbol>
+        <symbol id="i-scissors" viewBox="0 0 24 24">
+            <circle cx="6" cy="6" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+            <circle cx="6" cy="18" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="m8.5 7.5 11 9M8.5 16.5 20 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24">
+            <path d="M4 12h15M14 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="i-shop" viewBox="0 0 24 24">
+            <path d="M3 9h18l-2-5H5L3 9Zm2 0v11h14V9M9 20v-6h6v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="i-sparkle" viewBox="0 0 24 24">
+            <path d="M12 2c1.2 4.7 2.3 5.8 7 7-4.7 1.2-5.8 2.3-7 7-1.2-4.7-2.3-5.8-7-7 4.7-1.2 5.8-2.3 7-7ZM19 16c.6 2.3 1.2 2.9 3.5 3.5-2.3.6-2.9 1.2-3.5 3.5-.6-2.3-1.2-2.9-3.5-3.5 2.3-.6 2.9-1.2 3.5-3.5Z" fill="currentColor"/>
+        </symbol>
+    </svg>
+
+    <nav class="navbar" aria-label="Navegação principal">
+        <div class="container navbar__inner">
+            <a class="brand" href="#inicio" aria-label="AgendaPro Beauty - início">
+                <svg class="brand__icon"><use href="#i-lotus"></use></svg>
+                <span class="brand__text">Agenda<span>Pro</span><small>BEAUTY</small></span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menuPrincipal">
+                <span></span><span></span><span></span>
+            </button>
+
+            <div class="nav-content" id="menuPrincipal">
+                <ul class="nav-menu">
+                    <li><a class="nav-link active" href="#inicio">Início</a></li>
+                    <li><a class="nav-link" href="#servicos">Serviços</a></li>
+                    <li><a class="nav-link" href="#profissionais">Profissionais</a></li>
+                    <li><a class="nav-link" href="#agendamento">Agendamento</a></li>
+                    <li><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <button class="icon-btn" id="themeToggle" type="button" aria-label="Alternar tema">
+                        <svg><use href="#i-moon"></use></svg>
+                    </button>
+                    <button class="icon-btn" id="focusSearch" type="button" aria-label="Pesquisar serviço">
+                        <svg><use href="#i-search"></use></svg>
+                    </button>
+                    <a class="btn btn-primary btn-nav" href="#agendamento">
+                        <svg><use href="#i-calendar"></use></svg>
+                        Agendar Agora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <header class="hero" id="inicio">
+            <div class="container hero__grid">
+                <div class="hero__copy">
+                    <span class="sparkle sparkle--one">✦</span>
+                    <span class="sparkle sparkle--two">✦</span>
+                    <h1>Agende sua<br>beleza em<br><strong>poucos cliques</strong></h1>
+                    <p>Encontre os melhores profissionais, escolha o serviço ideal e agende seu horário online com rapidez e praticidade.</p>
+                    <div class="hero__actions">
+                        <a class="btn btn-primary" href="#agendamento">
+                            <svg><use href="#i-calendar"></use></svg>
+                            Agendar Agora
+                        </a>
+                        <a class="btn btn-outline" href="#servicos">
+                            Conhecer Serviços
+                            <svg><use href="#i-arrow"></use></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero__visual" aria-label="Profissional de beleza em um salão">
+                    <img src="img/hero-beauty.jpg" alt="Profissional de beleza com cabelos longos em um salão">
+                    <div class="floating-info floating-info--rating">
+                        <svg class="floating-info__icon star"><use href="#i-star"></use></svg>
+                        <strong>4,9</strong><span>Avaliação<br>média</span>
+                    </div>
+                    <div class="floating-info floating-info--clients">
+                        <svg class="floating-info__icon"><use href="#i-users"></use></svg>
+                        <strong>+5.000</strong><span>Clientes<br>satisfeitos</span>
+                    </div>
+                    <div class="floating-info floating-info--professionals">
+                        <svg class="floating-info__icon"><use href="#i-person"></use></svg>
+                        <strong>+80</strong><span>Profissionais<br>ativos</span>
+                    </div>
+                    <div class="floating-info floating-info--online">
+                        <svg class="floating-info__icon"><use href="#i-calendar"></use></svg>
+                        <strong>Agenda<br>Online</strong><span>24h por dia</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="services compact-section" id="servicos">
+            <div class="container section-grid">
+                <div class="section-intro">
+                    <h2>Nossos Serviços</h2>
+                    <label class="search-box" for="searchInput">
+                        <svg><use href="#i-search"></use></svg>
+                        <input id="searchInput" type="search" placeholder="Pesquisar serviço..." autocomplete="off">
+                    </label>
+                    <a class="text-link" href="#agendamento">Ver todos os serviços <svg><use href="#i-arrow"></use></svg></a>
+                </div>
+
+                <div class="cards-strip" id="serviceCards">
+                    <article class="service-card" data-search="corte feminino corte finalização cabelos">
+                        <div class="service-card__image">
+                            <img src="img/servico-corte.jpg" alt="Corte feminino">
+                            <span class="service-card__badge"><svg><use href="#i-scissors"></use></svg></span>
+                        </div>
+                        <div class="service-card__body">
+                            <h3>Corte Feminino</h3><p>Corte e finalização</p>
+                            <div class="card-bottom"><strong>R$ 80,00</strong><button class="btn-small" type="button">Agendar</button></div>
+                        </div>
+                    </article>
+
+                    <article class="service-card" data-search="escova modeladora cabelo cabelos">
+                        <div class="service-card__image">
+                            <img src="img/servico-escova.jpg" alt="Escova modeladora">
+                            <span class="service-card__badge">✺</span>
+                        </div>
+                        <div class="service-card__body">
+                            <h3>Escova</h3><p>Escova modeladora</p>
+                            <div class="card-bottom"><strong>R$ 45,00</strong><button class="btn-small" type="button">Agendar</button></div>
+                        </div>
+                    </article>
+
+                    <article class="service-card" data-search="coloração tintura cabelo cabelos">
+                        <div class="service-card__image">
+                            <img src="img/servico-coloracao.jpg" alt="Coloração de cabelos">
+                            <span class="service-card__badge">▰</span>
+                        </div>
+                        <div class="service-card__body">
+                            <h3>Coloração</h3><p>Coloração completa</p>
+                            <div class="card-bottom"><strong>R$ 220,00</strong><button class="btn-small" type="button">Agendar</button></div>
+                        </div>
+                    </article>
+
+                    <article class="service-card" data-search="manicure unhas esmaltação">
+                        <div class="service-card__image">
+                            <img src="img/servico-manicure.jpg" alt="Serviço de manicure">
+                            <span class="service-card__badge">♟</span>
+                        </div>
+                        <div class="service-card__body">
+                            <h3>Manicure</h3><p>Manicure completa</p>
+                            <div class="card-bottom"><strong>R$ 35,00</strong><button class="btn-small" type="button">Agendar</button></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories compact-row" aria-labelledby="categoriasTitulo">
+            <div class="container row-grid">
+                <h2 id="categoriasTitulo">Categorias</h2>
+                <div class="category-list">
+                    <a href="#servicos"><span>♙</span>Cabelos</a>
+                    <a href="#servicos"><span>♧</span>Manicure</a>
+                    <a href="#servicos"><svg><use href="#i-lotus"></use></svg>Estética</a>
+                    <a href="#servicos"><span>✎</span>Maquiagem</a>
+                    <a href="#servicos"><span>♨</span>Spa</a>
+                    <a href="#servicos"><span>♞</span>Barbearia</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="professionals compact-row" id="profissionais">
+            <div class="container row-grid">
+                <div class="section-intro section-intro--small">
+                    <h2>Nossos Profissionais</h2>
+                    <a class="text-link" href="#agendamento">Ver todos os profissionais <svg><use href="#i-arrow"></use></svg></a>
+                </div>
+
+                <div class="professional-list">
+                    <article class="professional-card">
+                        <img src="img/profissional-ana.jpg" alt="Ana Paula">
+                        <div><h3>Ana Paula</h3><p>Especialista em<br>Coloração</p><span class="rating">★★★★★ <b>4.9</b></span><button class="btn-small" type="button">Ver Agenda</button></div>
+                    </article>
+                    <article class="professional-card">
+                        <img src="img/profissional-carlos.jpg" alt="Carlos Eduardo">
+                        <div><h3>Carlos Eduardo</h3><p>Especialista em<br>Cortes Masculinos</p><span class="rating">★★★★★ <b>4.8</b></span><button class="btn-small" type="button">Ver Agenda</button></div>
+                    </article>
+                    <article class="professional-card">
+                        <img src="img/profissional-juliana.jpg" alt="Juliana Alves">
+                        <div><h3>Juliana Alves</h3><p>Especialista em<br>Maquiagem</p><span class="rating">★★★★★ <b>4.9</b></span><button class="btn-small" type="button">Ver Agenda</button></div>
+                    </article>
+                    <article class="professional-card">
+                        <img src="img/profissional-mariana.jpg" alt="Mariana Costa">
+                        <div><h3>Mariana Costa</h3><p>Especialista em<br>Manicure</p><span class="rating">★★★★★ <b>4.8</b></span><button class="btn-small" type="button">Ver Agenda</button></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats" aria-label="Indicadores da plataforma">
+            <div class="container stats__grid">
+                <article><svg><use href="#i-users"></use></svg><strong>+5.000</strong><span>Clientes Satisfeitos</span></article>
+                <article><svg><use href="#i-person"></use></svg><strong>+120</strong><span>Profissionais</span></article>
+                <article><svg><use href="#i-shop"></use></svg><strong>+35</strong><span>Salões Parceiros</span></article>
+                <article><svg><use href="#i-star"></use></svg><strong>4,9</strong><span>Avaliação Média</span></article>
+            </div>
+        </section>
+
+        <section class="booking" id="agendamento">
+            <div class="container booking__box">
+                <div><span>Seu próximo cuidado começa aqui</span><h2>Escolha um serviço e reserve seu melhor horário.</h2></div>
+                <a class="btn btn-primary" href="mailto:contato@agendapro.com.br?subject=Agendamento">Solicitar agendamento</a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contato">
+        <div class="container footer__inner">
+            <span>© 2026 AgendaPro Beauty</span>
+            <a href="mailto:contato@agendapro.com.br">contato@agendapro.com.br</a>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="btnTopo" type="button" aria-label="Voltar ao topo">↑</button>
+    <script src="js/main.js"></script>
+</body>
+</html>
